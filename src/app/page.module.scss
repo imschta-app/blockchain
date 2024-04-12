@@ -1,0 +1,12 @@
+/* Stylesheet */
+
+.page {
+    height: 100%;
+
+    .content_container {
+        display: flex;
+        height: calc(3 * 100% / 5);
+        align-items: center;
+        justify-content: center;
+    }
+}

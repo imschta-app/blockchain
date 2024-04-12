@@ -1,0 +1,20 @@
+/* Stylesheet */
+
+.wallet {
+    .connect_container {
+        display: flex;
+        height: calc(3 * 100svh / 5);
+        align-items: center;
+        justify-content: center;
+
+        .block_container {
+            .text {
+                margin: 0px 0px 21px 0px;
+
+                span {
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+/* Stylesheet */
+
+.details {
+    position: relative;
+    height: 100svh;
+
+    .background {
+        position: relative;
+        margin: 0px 0px 21px 0px;
+        height: 100%;
+        background: var(--second-color);
+        clip-path: ellipse(150% 100% at 70% 0%);
+        transform: scaleY(-1) scaleX(-1);
+    }
+
+    .content_container {
+        position: absolute;
+        top: 92px;
+        z-index: 100;
+    }
+}
