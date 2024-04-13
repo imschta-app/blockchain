@@ -9,17 +9,17 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
 
 /* Stylesheet */
-import styles from "./PrimaryButton.module.scss";
+import styles from "./Connector.module.scss";
 
 /* Interface(s) */
-interface PrimaryButtonProps {
+interface ConnectorProps {
     icon: IconDefinition;
     label: string;
     disabled: boolean;
     setShowDetails: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const PrimaryButton: React.FC<PrimaryButtonProps> = ({ icon, label, disabled, setShowDetails }) => {
+const Connector: React.FC<ConnectorProps> = ({ icon, label, disabled, setShowDetails }) => {
     const { open } = useWeb3Modal();
     return (
         <button
@@ -27,7 +27,7 @@ const PrimaryButton: React.FC<PrimaryButtonProps> = ({ icon, label, disabled, se
                 pointerEvents: disabled ? "none" : undefined,
                 opacity: disabled ? 0.5 : undefined
             }}
-            className={styles.primary_button}
+            className={styles.connector}
             // onClick={() => setShowDetails(true)}
             onClick={() => open({ view: "Connect" })}
         >
@@ -40,4 +40,4 @@ const PrimaryButton: React.FC<PrimaryButtonProps> = ({ icon, label, disabled, se
     );
 };
 
-export default PrimaryButton;
+export default Connector;

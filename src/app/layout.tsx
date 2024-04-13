@@ -1,12 +1,16 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Roboto } from "next/font/google";
 
+/* Web3Modal */
 import { Web3Modal } from "@/app/utils/context/web3modal";
 
 /* Stylesheet */
 import "./theme/globals.scss";
 
-const inter = Inter({ subsets: ["latin"] });
+const roboto = Roboto({
+    weight: ["300", "400", "500"],
+    subsets: ["latin"]
+});
 
 export const metadata: Metadata = {
     title: "Create Next App",
@@ -21,7 +25,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body
-                className={inter.className}
+                className={roboto.className}
                 suppressHydrationWarning={true}
             >
                 <Web3Modal>{children}</Web3Modal>

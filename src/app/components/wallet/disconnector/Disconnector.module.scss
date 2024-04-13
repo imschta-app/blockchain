@@ -1,0 +1,17 @@
+/* Stylesheet */
+
+.disconnector_btn {
+    position: absolute;
+    height: 52px;
+    width: 52px;
+    top: 12px;
+    right: 12px;
+    border: none;
+    border-radius: 50%;
+    color: #ffffff;
+    background: var(--fourth-color);
+
+    &:hover {
+        filter: brightness(110%);
+    }
+}

@@ -2,9 +2,11 @@
 
 import { createWeb3Modal, defaultConfig } from "@web3modal/ethers/react";
 
+// projectId (playground)
 const projectId = "8576641cd6bbdfc49fa6c8fb8271f42b";
 
 const mainnet = {
+    // chains refer to a blockchain network or protocol
     chainId: 1,
     name: "Ethereum",
     currency: "ETH",
@@ -13,8 +15,8 @@ const mainnet = {
 };
 
 const metadata = {
-    name: "My Website",
-    description: "My Website description",
+    name: "My Playground",
+    description: "First try to connect to a wallet using Next.js and web3modal",
     url: "http://localhost:3000",
     icons: ["https://avatars.mywebsite.com/"]
 };
@@ -26,11 +28,9 @@ const ethersConfig = defaultConfig({
 createWeb3Modal({
     ethersConfig,
     chains: [mainnet],
-    projectId,
-    enableAnalytics: true, // Optional - defaults to your Cloud configuration
-    enableOnramp: true // Optional - false as default
+    projectId
 });
 
-export const Web3Modal = ({ children }: any) => {
+export const Web3Modal = ({ children }: { children: React.ReactNode }) => {
     return children;
 };

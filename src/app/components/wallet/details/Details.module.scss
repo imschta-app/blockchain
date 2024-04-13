@@ -7,7 +7,7 @@
     .background {
         position: relative;
         margin: 0px 0px 21px 0px;
-        height: 100%;
+        height: calc(100% + 121px);
         background: var(--second-color);
         clip-path: ellipse(150% 100% at 70% 0%);
         transform: scaleY(-1) scaleX(-1);
@@ -15,7 +15,29 @@
 
     .content_container {
         position: absolute;
-        top: 92px;
+        top: 121px;
+        left: 0;
+        right: 0;
         z-index: 100;
+
+        .grid_container {
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            width: 95svw;
+            gap: 21px;
+        }
+    }
+}
+
+/* Media Queries */
+
+@media screen and (min-width: 1280px) {
+    .details {
+        .content_container {
+            .grid_container {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
     }
 }

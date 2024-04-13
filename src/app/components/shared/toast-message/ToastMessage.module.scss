@@ -1,0 +1,29 @@
+/* Stylesheet */
+
+@keyframes slide-up {
+    from {
+        transform: translateY(120px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.toast_message {
+    padding: 16px;
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    background: red;
+    animation: slide-up 1s ease-out;
+    opacity: 0.9;
+
+    .icon {
+        position: absolute;
+        left: 21px;
+    }
+}

@@ -1,0 +1,38 @@
+/* Stylesheet */
+
+.card_item {
+    height: 210px;
+    background: var(--first-color);
+    border-radius: 12px;
+    overflow: hidden;
+
+    .label {
+        display: flex;
+        height: 52px;
+        align-items: center;
+        background: var(--fifth-color);
+
+        h3 {
+            margin: 0px 0px 0px 12px;
+        }
+    }
+
+    .wrapper_container {
+        display: flex;
+        height: calc(100% - 52px);
+        align-items: center;
+        justify-content: center;
+
+        .block_container {
+            .icon_container {
+                margin: 0px 0px 21px 0px;
+                text-align: center;
+
+                .icon {
+                    height: 68px;
+                    width: 68px;
+                }
+            }
+        }
+    }
+}

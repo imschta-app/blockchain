@@ -5,6 +5,9 @@
     --first-color-darker: #212734;
     --first-text-color: #ffffff;
     --second-color: #277cab;
+    --third-color: #53ba68;
+    --fourth-color: #f48067;
+    --fifth-color: #6676b9;
 }
 
 html,
@@ -12,6 +15,16 @@ body {
     margin: 0;
     height: 100%;
     background: var(--first-color);
+}
+
+h3 {
+    margin: 0;
+    color: var(--first-text-color);
+    font-weight: 400;
+}
+
+button {
+    font-family: inherit;
 }
 
 .text {
@@ -22,4 +35,13 @@ body {
 .icon {
     height: 21px;
     width: auto;
+    color: #ffffff;
+}
+
+/* Media Queries */
+
+@media screen and (min-width: 1280px) {
+    h1 {
+        font-size: 36px;
+    }
 }
